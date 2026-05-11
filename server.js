@@ -107,8 +107,7 @@ app.post('/v1/chat/completions', async (req, res) => {
         'Authorization': `Bearer ${NIM_API_KEY}`,
         'Content-Type': 'application/json'
       },
-      responseType: stream ? 'stream' : 'json',
-      timeout: 300000
+      responseType: stream ? 'stream' : 'json'
     });
     
     if (stream) {
